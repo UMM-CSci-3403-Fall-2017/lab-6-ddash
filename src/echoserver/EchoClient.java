@@ -5,6 +5,7 @@ import java.io.*;
 public class EchoClient {
   public static void main(String[] args){
     try{
+      //Read bytes
       InputStream keyboard = System.in;
 
       Socket socket = new Socket("127.0.0.1", 6013);
@@ -21,6 +22,7 @@ public class EchoClient {
       keyboard.close();
       socket.close();
 
+      // Handles binary files
       System.out.flush();
 
     }catch (IOException ioe){
